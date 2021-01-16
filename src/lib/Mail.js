@@ -6,23 +6,6 @@ export default class Mail {
     this.handlebarsMailTemplate = new HandlebarsMailTemplate();
   }
 
-  async init() {
-    const testAccount = await nodemailer.createTestAccount();
-    console.log(testAccount);
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
-      secure: false,
-      auth: {
-        user: testAccount.user,
-        pass: testAccount.pass,
-      },
-    });
-
-    this.client = transporter;
-    return transporter;
-  }
-
   async sendMail(to, from, subject, templateData) {
     const testAccount = await nodemailer.createTestAccount();
 
