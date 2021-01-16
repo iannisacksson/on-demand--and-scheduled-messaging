@@ -6,6 +6,6 @@ const emailController = new EmailController();
 
 const routes = express.Router();
 
-routes.get('/', emailController.index);
+routes.post('/', emailController.create);
 
 module.exports = routes;

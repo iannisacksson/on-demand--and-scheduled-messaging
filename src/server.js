@@ -1,10 +1,14 @@
+import 'dotenv/config';
 import express from 'express';
+import path from 'path';
 
 import routes from './routes';
+const tmpFolder = path.resolve(__dirname, 'public');
 
 const app = express();
 
 app.use(express.json());
+app.use('/files', express.static(tmpFolder));
 app.use(routes);
 
 app.listen(3333, () => {
