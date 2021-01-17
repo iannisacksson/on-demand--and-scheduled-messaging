@@ -1,11 +1,10 @@
 import path from 'path';
-import Queue from '../lib/Queue';
+import Queue from '../../lib/Queue';
 
-import { users } from '../../db';
+import { users } from '../../../db';
 
 class SendMailService {
   async execute() {
-    console.log(true);
     const forgotPasswordTemplate = path.resolve(
       __dirname,
       '..',

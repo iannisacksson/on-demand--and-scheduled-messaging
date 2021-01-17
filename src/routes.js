@@ -1,6 +1,6 @@
 import express from 'express';
 
-import EmailController from './controller/EmailController';
+import EmailController from './app/controller/EmailController';
 
 const emailController = new EmailController();
 

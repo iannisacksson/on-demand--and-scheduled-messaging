@@ -5,7 +5,7 @@ const sendMailService = new SendMailService();
 
 class SendMailCron {
   async execute() {
-    cron.schedule('* * 12 */1 * *', async () => {
+    cron.schedule('0 0 13 */1 * *', async () => {
       await sendMailService.execute();
     });
   }

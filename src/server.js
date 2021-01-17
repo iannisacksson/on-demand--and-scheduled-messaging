@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 
 import routes from './routes';
-import './cron/index';
+import './app/cron/index';
 
 const tmpFolder = path.resolve(__dirname, 'public');
 
