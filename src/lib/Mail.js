@@ -21,8 +21,8 @@ export default class Mail {
 
     const message = await transporter.sendMail({
       from: {
-        name: from?.name || 'Equipe Yoga Co.',
-        address: from?.email || 'equipe@yogaco.com.br',
+        name: from?.name || 'Equipe Back-end',
+        address: from?.email || 'equipe@backend.com.br',
       },
       to: {
         name: to.name,
