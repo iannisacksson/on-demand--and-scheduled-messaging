@@ -5,6 +5,7 @@ import { users } from '../../db';
 
 class SendMailService {
   async execute() {
+    console.log(true);
     const forgotPasswordTemplate = path.resolve(
       __dirname,
       '..',
